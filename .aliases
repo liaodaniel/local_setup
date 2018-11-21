@@ -1,0 +1,11 @@
+function d-rmrf() {
+  docker rm $(docker ps --all -q -f status=exited)
+}
+
+function d-env() {
+  eval $(docker-machine env local)
+}
+
+alias d-mr="docker-machine restart local"
+alias intellij="open -a /Applications/IntelliJ\ IDEA\ CE.app"
+alias c-dns="sudo killall -HUP mDNSResponder"
