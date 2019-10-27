@@ -1,8 +1,9 @@
 # Local Setup
 
 ## Install font
-* brew cask install font-hack-nerd-font
+* brew cask install font-hack-nerd-font font-meslo-for-powerline
 * Set iterm2 > Preferences > Profiles > Text > Non-ACII Font to use `Hack Nerd Font`
+* Set iterm2 > Preferences > Profiles > Text > Font to use `Meslo LG S Regular for Powerline`
 
 ## Install Powerline shell
 * git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
