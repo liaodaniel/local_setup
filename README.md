@@ -12,3 +12,7 @@
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE=nerdfont-complete
 ```
+
+## Doom emacs
+
+
