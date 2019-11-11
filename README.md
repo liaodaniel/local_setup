@@ -15,4 +15,10 @@ POWERLEVEL9K_MODE=nerdfont-complete
 
 ## Doom emacs
 
+Execute below to install Emacs
+```
+brew tap d12frosted/emacs-plus
+brew install emacs-plus --with-modern-icon
 
+git clone -b develop https://github.com/hlissner/doom-emacs ~/.emacs.d
+```
