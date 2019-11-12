@@ -1,11 +1,13 @@
-function d-rmrf() {
-  docker rm $(docker ps --all -q -f status=exited)
-}
+# Kubernetes aliases
+## Switch context to specific EKS cluster
+alias kc="aws eks update-kubeconfig --name $@"
 
-function d-env() {
-  eval $(docker-machine env local)
-}
+## Graceful restart of deployments
+alias krdeploy="kubectl rollout restart deploy $@"
 
-alias d-mr="docker-machine restart local"
-alias intellij="open -a /Applications/IntelliJ\ IDEA\ CE.app"
-alias c-dns="sudo killall -HUP mDNSResponder"
+## Schedule and exec into the specified pod
+alias ktest="kubectl $@ run test-pod --generator=run-pod/v1 -it --rm=true --image ubuntu:16.04 --labels app=test --command=true /bin/sh"
+
+## Get the list of all role types and their bindings
+alias kgrb="kubectl get rolebindings,clusterrolebindings --all-namespaces -o custom-columns='KIND:kind,NAMESPACE:metadata.namespace,NAME:metadata.name,SERVICE_ACCOUNTS:subjects[?(@.kind==\"ServiceAccount\")].name'"
+

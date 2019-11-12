@@ -21,4 +21,12 @@ brew tap d12frosted/emacs-plus
 brew install emacs-plus --with-modern-icon
 
 git clone -b develop https://github.com/hlissner/doom-emacs ~/.emacs.d
+
+cd ~/.emacs.d
+./bin/doom install
+./bin/doom refresh
+./bin/doom a
+
+go get -v -u github.com/mdempsky/gocode
+go get -v -u github.com/rogpeppe/godef
 ```
