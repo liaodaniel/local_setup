@@ -2,6 +2,12 @@
 ## Switch context to specific EKS cluster
 alias kc="aws eks update-kubeconfig --name $@"
 
+alias kd="kubectl describe $@"
+alias kdel="kubectl delete $@"
+alias kedit="kubectl edit $@"
+alias kexec="kubectl exec $@"
+alias kg="kubectl get $@"
+
 ## Graceful restart of deployments
 alias krdeploy="kubectl rollout restart deploy $@"
 
