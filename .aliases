@@ -6,6 +6,7 @@ alias kd="kubectl describe $@"
 alias kdel="kubectl delete $@"
 alias kedit="kubectl edit $@"
 alias kexec="kubectl exec $@"
+alias kpf="kubectl port-forward $@"
 alias kg="kubectl get $@"
 
 ## Graceful restart of deployments
