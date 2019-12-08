@@ -14,6 +14,10 @@
 ;; Set default theme
 (setq doom-theme 'doom-oceanic-next)
 
+;; Set default editor
+(setenv "EDITOR"
+    "emacsclient -c")
+
 ;; Cats
 (use-package nyan-mode
    :custom
