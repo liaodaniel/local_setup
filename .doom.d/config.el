@@ -5,11 +5,14 @@
 ;; Search chars across windows
 (setq avy-all-windows 'all-frames)
 
+;; Set to use nerd hack font
+(setq doom-font (font-spec :family "Hack Nerd Font" :size 12))
+
 ;; Reload existing files changed outside of emacs
 (global-auto-revert-mode t)
 
 ;; Set default theme
-(setq doom-theme 'gotham)
+(setq doom-theme 'doom-oceanic-next)
 
 ;; Cats
 (use-package nyan-mode
@@ -36,6 +39,4 @@
 (map!
   :leader
   "j" nil
-  (:desc "Go To Char All Windows" "j" #'evil-avy-goto-char-timer))
-
-
+  (:desc "Go To Chars Across Windows" "j" #'evil-avy-goto-char-timer))

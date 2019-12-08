@@ -7,4 +7,3 @@
 ;; (package! builtin-package :disable t)
 
 (package! nyan-mode)
-(package! gotham-theme)
