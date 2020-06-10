@@ -18,3 +18,12 @@ alias ktest="kubectl $@ run test-pod --generator=run-pod/v1 -it --rm=true --imag
 ## Get the list of all role types and their bindings
 alias kgrb="kubectl get rolebindings,clusterrolebindings --all-namespaces -o custom-columns='KIND:kind,NAMESPACE:metadata.namespace,NAME:metadata.name,SERVICE_ACCOUNTS:subjects[?(@.kind==\"ServiceAccount\")].name'"
 
+# AWS shortcuts
+## Login to ECR with AWS Version 2
+func ecr_login(){
+  declare -a accounts=("602401143452" "$@")
+  for i in "${accounts[@]}"; do
+    echo -e "${i}: \c"
+    echo $(aws ecr get-login-password) | docker login --password-stdin --username AWS ${i}.dkr.ecr.ap-southeast-2.amazonaws.com
+  done
+}
