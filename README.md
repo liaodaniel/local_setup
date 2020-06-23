@@ -61,14 +61,14 @@ POWERLEVEL9K_CUSTOM_AWS_ASSUME_ROLE_BACKGROUND='red'
 Execute below to install Emacs
 ```
 brew tap d12frosted/emacs-plus
-brew install emacs-plus --with-modern-icon
+brew install emacs-plus@27 --with-modern-icon-pen
 
 git clone -b develop https://github.com/hlissner/doom-emacs ~/.emacs.d
 
 cd ~/.emacs.d
-./bin/doom install
-./bin/doom refresh
+./bin/doom sync
 
-go get -v -u github.com/mdempsky/gocode
-go get -v -u github.com/rogpeppe/godef
+GO111MODULE=on go get golang.org/x/tools/gopls@latest
+go get -u github.com/mdempsky/gocode
+go get -u github.com/rogpeppe/godef
 ```
