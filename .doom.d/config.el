@@ -39,6 +39,10 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
+;; Clear projectile cache on project load
+(add-hook 'projectile-after-switch-project-hook (lambda ()
+      (projectile-invalidate-cache nil)))
+
 ;; Set initial frame size
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
