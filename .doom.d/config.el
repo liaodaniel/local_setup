@@ -109,15 +109,6 @@
   (setq company-idle-delay 0)
   (setq company-minimum-prefix-length 1))
 
-;; Change menu to appear in the middle
-(use-package ivy-posframe
-  :demand t
-  :after ivy
-  :custom
-  (ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-frame-center)))
-  :config
-  (ivy-posframe-mode))
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
