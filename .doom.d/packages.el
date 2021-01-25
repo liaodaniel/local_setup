@@ -50,4 +50,3 @@
 ;(unpin! t)
 (package! nyan-mode)
 
-(package! ivy-posframe)
