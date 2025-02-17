@@ -3,7 +3,7 @@
 ## Install font
 
 ```sh
-brew install --cask font-hack-nerd-font font-meslo-for-powerline
+brew install --cask font-hack-nerd-font font-meslo-for-powerline 
 ```
 
 * Set iterm2 > Preferences > Profiles > Text > Non-ACII Font to use `Hack Nerd Font`
